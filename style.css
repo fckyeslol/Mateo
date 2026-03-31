@@ -1,0 +1,240 @@
+/*
+ * Global stylesheet for the user’s personal website.
+ * This CSS defines a modern, responsive layout inspired by the
+ * reference site. It uses a dark accent for headers and footers,
+ * soft backgrounds for content areas and a flexible grid system
+ * for galleries and split layouts. Feel free to adjust the colors
+ * and fonts to better match your own taste.
+ */
+
+/* Reset some defaults */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    background: #f5f7fa;
+    color: #333;
+}
+
+/* Sticky header navigation */
+header {
+    background: #011627;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 999;
+}
+
+header .logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 4px;
+    font-weight: 600;
+}
+
+header nav a.active {
+    border-bottom: 2px solid #2ec4b6;
+}
+
+header nav a:hover {
+    color: #2ec4b6;
+}
+
+/* Hero section used at the top of each page */
+.hero {
+    background: linear-gradient(135deg, #011627 0%, #112b44 100%);
+    color: #fff;
+    padding: 100px 20px 60px;
+    text-align: center;
+    margin-top: 60px; /* offsets the fixed header */
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+/* General section wrapper */
+.section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Gallery grid for the home page */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+    gap: 10px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-item.large {
+    grid-row: span 2;
+}
+
+.gallery-item img,
+.gallery-item iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.gallery-item iframe {
+    border: none;
+}
+
+/* Two column layout for the academics page */
+.two-col {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.two-col .image {
+    flex: 1 1 300px;
+}
+
+.two-col .image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.two-col .content {
+    flex: 2 1 400px;
+}
+
+ul.achievements {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+ul.achievements li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Link styled as a button */
+.button {
+    display: inline-block;
+    background: #2ec4b6;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.button:hover {
+    background: #1fa397;
+}
+
+/* Thank you section */
+.section.thanks {
+    text-align: center;
+}
+
+.section.thanks img {
+    max-width: 200px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+/* Split layout for leadership/outreach sections */
+.split {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.split .image {
+    flex: 1 1 300px;
+}
+
+.split .image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.split .content {
+    flex: 2 1 400px;
+}
+
+.split h3 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Footer styling */
+footer {
+    background: #011627;
+    color: #fff;
+    padding: 40px 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+footer h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer li {
+    margin-bottom: 8px;
+}
+
+footer a {
+    color: #2ec4b6;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
