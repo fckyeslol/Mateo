@@ -1,57 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mateo Pirela Pulido — Astronomer & Founder</title>
+<meta name="description" content="Mateo Pirela Pulido — olympiad astronomer from Barranquilla, software engineer at 30X, and founder of PadelYa. Betting on instinct over certainty.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Hanken+Grotesk:wght@300..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">Mateo Pirela Pulido</div>
-        <nav>
-            <a href="index.html" class="active">About me</a>
-            <a href="academics.html">Academics</a>
-            <a href="outreach.html">Leadership &amp; Service</a>
-        </nav>
-    </header>
-    <section class="hero">
-        <h1>About me</h1>
-    </section>
-    <section class="section about">
-        <h2>Hello… it’s me ;)</h2>
-        <p>I’m an enthusiastic student from the IED Alexander von Humboldt with a deep curiosity for astronomy, philosophy and chemistry. My academic record is defined by excellence across disciplines and a passion for discovering how the universe works.</p>
-        <p>I served as the representative student on the board of directors and as student comptroller, advocating for transparency and the needs of my peers. Through clubs and community outreach I strive to empower students to think critically and dream big.</p>
-    </section>
-    <section class="section gallery">
-        <div class="gallery-item large">
-            <img src="assets/iindia.png" alt="Colorful galaxy and nebula in space">
+<a class="skip" href="#origin">Skip to content</a>
+
+<div class="grain" aria-hidden="true"></div>
+<canvas id="starfield" aria-hidden="true"></canvas>
+<div class="scroll-progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top"><span class="brand-mark">✦</span> Mateo&nbsp;Pirela</a>
+  <nav class="nav-links" aria-label="Section navigation">
+    <a href="#cosmos">Cosmos</a>
+    <a href="#building">Building</a>
+    <a href="#mind">Mind</a>
+    <a href="#timeline">Journey</a>
+    <a href="#contact" class="nav-cta">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ░░ HERO ░░ -->
+  <section class="hero" id="hero">
+    <div class="hero-orbit" aria-hidden="true"><span class="planet"></span></div>
+    <div class="hero-inner">
+      <p class="eyebrow reveal">10.96° N · 74.80° W — Barranquilla, Colombia</p>
+      <h1 class="hero-title">
+        <span class="reveal" style="--d:1">Mateo</span>
+        <span class="reveal" style="--d:2">Pirela Pulido</span>
+      </h1>
+      <p class="hero-tag reveal" style="--d:3"><em>Astronomer</em> &amp; <em>founder</em>.</p>
+      <p class="hero-hook reveal" style="--d:4">
+        Silver-medal olympiad astronomer who represented Colombia in Mumbai — now a software
+        engineer at <strong>30X</strong> and founder of <strong>PadelYa</strong>. I bet on
+        instinct over certainty, and bring people with me.
+      </p>
+      <div class="hero-cta reveal" style="--d:5">
+        <a class="btn btn-solid" href="#building">See what I'm building</a>
+        <a class="btn btn-ghost" href="#origin">Start the journey</a>
+      </div>
+    </div>
+    <a class="scroll-cue reveal" style="--d:6" href="#origin" aria-label="Scroll down">
+      <span></span> scroll
+    </a>
+  </section>
+
+  <!-- ░░ ORIGIN / ABOUT ░░ -->
+  <section class="section split" id="origin">
+    <div class="wrap split-grid">
+      <div class="split-text">
+        <div class="cat"><span class="cat-id">01</span><span class="cat-co">RA 02ʰ — ORIGIN</span></div>
+        <h2 class="reveal">A public-school kid<br>who kept reaching.</h2>
+        <p class="reveal">
+          I grew up in Barranquilla and studied at IED Alexander von Humboldt, a public school
+          where dreaming of building or studying abroad can feel out of reach — limited by access,
+          not talent. I discovered science during the pandemic, doing experiments in my backyard,
+          and never really stopped.
+        </p>
+        <p class="reveal">
+          Everything since has come from the same instinct: move before you feel ready, build with
+          whatever you have, and pull other people up with you.
+        </p>
+        <blockquote class="pullquote reveal">
+          “Resources are never a limitation — they’re a motivation to give more of yourself,
+          even when it seems impossible.”
+        </blockquote>
+      </div>
+      <div class="split-media reveal">
+        <figure class="porthole">
+          <img src="assets/img.jpeg" alt="Mateo in Barranquilla, Colombia" loading="lazy">
+          <figcaption>Barranquilla, Colombia</figcaption>
+        </figure>
+        <ul class="fact-list">
+          <li><span>Now</span> Founder, PadelYa</li>
+          <li><span>Day job</span> Software Engineer, 30X</li>
+          <li><span>Field</span> Astrophysics · Chemistry · Philosophy</li>
+          <li><span>Mode</span> Instinct &gt; certainty</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ COSMOS ░░ -->
+  <section class="section cosmos" id="cosmos">
+    <div class="wrap">
+      <div class="cat"><span class="cat-id">02</span><span class="cat-co">RA 05ʰ — THE COSMOS</span></div>
+      <h2 class="reveal">I went looking for the<br>edges of the universe.</h2>
+      <p class="lead reveal">
+        Astronomy is the spine of everything I do. I represented Colombia at the
+        International Olympiad on Astronomy &amp; Astrophysics (IOAA 2025) in Mumbai, and medaled
+        across the region on the way there.
+      </p>
+
+      <div class="medal-row">
+        <article class="medal reveal" style="--d:1">
+          <span class="medal-dot gold"></span>
+          <h3>Silver</h3>
+          <p>Latin American Olympiad on Astronomy &amp; Astronautics (OLAA 2025)</p>
+        </article>
+        <article class="medal reveal" style="--d:2">
+          <span class="medal-dot gold"></span>
+          <h3>Silver</h3>
+          <p>Colombian Olympiad on Astronomy (OCA 2025)</p>
+        </article>
+        <article class="medal reveal" style="--d:3">
+          <span class="medal-dot teal"></span>
+          <h3>IOAA 2025</h3>
+          <p>Represented Colombia · Mumbai, India</p>
+        </article>
+        <article class="medal reveal" style="--d:4">
+          <span class="medal-dot teal"></span>
+          <h3>OBA Scholarship</h3>
+          <p>Brazilian Astronomy Olympiad training camps</p>
+        </article>
+      </div>
+
+      <div class="cosmos-media">
+        <figure class="frame tall reveal">
+          <img src="assets/indiaimg.png" alt="Mateo at IOAA 2025 in Mumbai, India" loading="lazy">
+          <figcaption>IOAA 2025 — Mumbai</figcaption>
+        </figure>
+        <div class="cosmos-aside reveal">
+          <figure class="frame">
+            <img src="assets/medalolaa.png" alt="Medal ceremony at the Latin American Astronomy Olympiad" loading="lazy">
+            <figcaption>OLAA — medal ceremony</figcaption>
+          </figure>
+          <p class="note">
+            Before any of the medals, I built a refracting telescope by hand — chromatic
+            aberration and all. It taught me the lesson everything else confirmed: you never
+            need the perfect equipment to start looking up. And I was later mentored in
+            biophysics &amp; X-ray crystallography by a Harvard-affiliated research scientist.
+          </p>
         </div>
-        <div class="gallery-item">
-            <img src="assets/telescope.png" alt="Colorful geometric abstract background">
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ BUILDING ░░ -->
+  <section class="section building" id="building">
+    <div class="wrap">
+      <div class="cat"><span class="cat-id">03</span><span class="cat-co">RA 09ʰ — BUILDING</span></div>
+      <h2 class="reveal">So I started building<br>things people want.</h2>
+
+      <div class="stat-row">
+        <div class="stat reveal"><b data-count="34">0</b><span>active users on PadelYa</span></div>
+        <div class="stat reveal" style="--d:1"><b data-count="500" data-suffix="K">0</b><span>COP in revenue, in 4 months</span></div>
+        <div class="stat reveal" style="--d:2"><b data-count="1" data-suffix="st">0</b><span>place, Daydream Hackathon 2025</span></div>
+      </div>
+
+      <div class="bento">
+        <article class="card card-feature reveal">
+          <span class="kicker">Founder</span>
+          <h3>PadelYa</h3>
+          <p>
+            Padel is 2-on-2 — you need exactly four people, and beginners rarely have three others
+            ready to play. PadelYa matches you with players at your level and books the court. I
+            started it because I lived the problem: I loved padel but could never fill a game.
+          </p>
+          <p class="card-meta">34 users · 500K COP revenue · backed by TSSI · <a href="https://padelya.co/" target="_blank" rel="noopener">padelya.co ↗</a></p>
+        </article>
+        <article class="card reveal" style="--d:1">
+          <span class="kicker">Engineering</span>
+          <h3>30X</h3>
+          <p>
+            Software engineer in the media-tech vertical at 30X, the startup founded by
+            <strong>Andrés Bilbao, co-founder of Rappi</strong>. I landed it by messaging Andrés
+            on Substack with everything I’d built — no referral, just the work.
+          </p>
+        </article>
+        <article class="card reveal" style="--d:2">
+          <span class="kicker">Hackathons</span>
+          <h3>Ship fast, win, repeat</h3>
+          <p>
+            1st at the Daydream Hackathon 2025, 2nd at Scrapyard, and I organized the
+            3rd-largest teen hackathon in the Americas with Hack Club, here in Barranquilla.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ MIND ░░ -->
+  <section class="section mind" id="mind">
+    <div class="wrap split-grid reverse">
+      <div class="split-media reveal">
+        <div class="butterfly" aria-hidden="true">
+          <svg viewBox="0 0 200 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="wing" d="M100 90C70 40 20 30 30 80c-8 40 40 55 70 10Z"/>
+            <path class="wing" d="M100 90C130 40 180 30 170 80c8 40-40 55-70 10Z"/>
+            <path class="wing" d="M100 95C75 120 40 140 55 160c20 22 45-10 45-55Z"/>
+            <path class="wing" d="M100 95C125 120 160 140 145 160c-20 22-45-10-45-55Z"/>
+            <line class="body" x1="100" y1="55" x2="100" y2="160"/>
+          </svg>
         </div>
-        <div class="gallery-item">
-            <img src="assets/img2.jpeg" alt="Golden trophy with celebratory lights">
-        </div>
-        <div class="gallery-item">
-            <img src="assets/ooba.png" alt="Teamwork and collaboration illustration">
-        </div>
-        <div class="gallery-item large">
-            <img src="assets/wjaime.png" alt="Futuristic technology and circuit illustration">
-        </div>
-    </section>
-    <footer>
-        <div class="contact">
-            <h3>Contact Info</h3>
-            <ul>
-                <li>Email: <a href="mailto:mateopirela08@gmail.com">mateopirela08@gmail.com</a></li>
-                <li>GitHub: <a href="https://github.com/fckyeslol" target="_blank" rel="noopener">github.com/fckyeslol</a></li>
-                <li>Currently in: Barranquilla, Atlántico, Colombia</li>
-            </ul>
-        </div>
-        <div class="notes">
-            <p>Feel free to reach out if you’d like to collaborate or learn more about my journey.</p>
-        </div>
+      </div>
+      <div class="split-text">
+        <div class="cat"><span class="cat-id">04</span><span class="cat-co">RA 13ʰ — MIND</span></div>
+        <h2 class="reveal">From booby-trap chemistry<br>to a love of hard questions.</h2>
+        <p class="reveal">
+          It started as a kid, mixing whatever I could find with my cousin Juan and wondering why
+          the smells changed. That curiosity turned into two bronze medals at the Colombian
+          Chemistry Olympiad — and into philosophy, where I placed 3rd in the country.
+        </p>
+        <p class="reveal">
+          I read the world through transformation. Like Kafka’s caterpillar, I spent years as a
+          pupa among people who were already free — and slowly became myself. If I could only ever
+          teach one class, it would be philosophy: how to be a better human, and how to help others
+          become one too.
+        </p>
+        <blockquote class="pullquote reveal">
+          “To answer humanity’s greatest enigmas, we must first understand the universe —
+          then unravel the confines of thought.”
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ LEADERSHIP ░░ -->
+  <section class="section leadership" id="leadership">
+    <div class="wrap">
+      <div class="cat"><span class="cat-id">05</span><span class="cat-co">RA 16ʰ — LEADERSHIP</span></div>
+      <h2 class="reveal">The best decisions<br>don’t end with us.</h2>
+      <div class="lead-grid">
+        <article class="lead-item reveal">
+          <b data-count="20" data-suffix="+">0</b>
+          <h3>Ortus Siderum Humboldt</h3>
+          <p>Led our astronomy program; took 20+ students to national finals and two all the way to IOAA 2025.</p>
+        </article>
+        <article class="lead-item reveal" style="--d:1">
+          <b data-count="350" data-suffix="+">0</b>
+          <h3>Elected to govern</h3>
+          <p>Student comptroller, then representative on the board of directors — chosen by 350+ peers.</p>
+        </article>
+        <article class="lead-item reveal" style="--d:2">
+          <b data-count="60" data-suffix="+">0</b>
+          <h3>PEP Program</h3>
+          <p>Helped shape the academic path of 60+ students from a boarding school.</p>
+        </article>
+        <article class="lead-item reveal" style="--d:3">
+          <b data-count="1" data-suffix="×/wk">0</b>
+          <h3>Every Thursday</h3>
+          <p>I run a class teaching students how to apply for scholarships and universities — the playbook I wish I’d had.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ TIMELINE / CONSTELLATION ░░ -->
+  <section class="section timeline" id="timeline">
+    <div class="wrap">
+      <div class="cat"><span class="cat-id">06</span><span class="cat-co">A NEW CONSTELLATION</span></div>
+      <h2 class="reveal">Plotted like a star map.</h2>
+      <p class="lead reveal">Every point is a decision made on instinct. Connect them and they spell a path.</p>
+      <div class="constellation reveal" id="constellation">
+        <svg viewBox="0 0 1000 420" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Timeline of Mateo's milestones as a constellation">
+          <polyline class="con-line" points="80,300 230,210 400,300 560,140 720,250 900,110"/>
+          <g class="con-node" style="--n:0"><circle cx="80" cy="300" r="6"/><text x="80" y="340">2020</text><text class="lbl" x="80" y="360">Found science</text></g>
+          <g class="con-node" style="--n:1"><circle cx="230" cy="210" r="6"/><text x="230" y="190">2022</text><text class="lbl" x="230" y="170">Founded clubs</text></g>
+          <g class="con-node" style="--n:2"><circle cx="400" cy="300" r="6"/><text x="400" y="340">2024</text><text class="lbl" x="400" y="360">Philosophy + Chemistry medals</text></g>
+          <g class="con-node big" style="--n:3"><circle cx="560" cy="140" r="8"/><text x="560" y="120">2025</text><text class="lbl" x="560" y="100">IOAA Mumbai · OLAA silver</text></g>
+          <g class="con-node" style="--n:4"><circle cx="720" cy="250" r="6"/><text x="720" y="290">2025</text><text class="lbl" x="720" y="310">Hackathon wins</text></g>
+          <g class="con-node big" style="--n:5"><circle cx="900" cy="110" r="8"/><text x="900" y="90">2026</text><text class="lbl" x="900" y="70">PadelYa · 30X</text></g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ HUMAN ░░ -->
+  <section class="section human" id="human">
+    <div class="wrap split-grid">
+      <div class="split-text">
+        <div class="cat"><span class="cat-id">07</span><span class="cat-co">OFF THE CLOCK</span></div>
+        <h2 class="reveal">What actually<br>makes me happy.</h2>
+        <p class="reveal">
+          Road trips with my grandfather in his old Renault, crossing mountains toward villages
+          where life moves slower. Waking up in an Embera community on the Pacific coast, learning
+          to fish the way they have for generations. I’ve loved butterflies since I was six — the
+          purest thing I knew for freedom.
+        </p>
+        <p class="reveal">
+          I’m happiest learning something I never imagined, sitting with people whose world is
+          different from mine. That’s the lens I bring to science: not just how the universe works,
+          but how people live the knowledge of it.
+        </p>
+      </div>
+      <div class="split-media reveal">
+        <figure class="frame">
+          <img src="assets/img3.jpeg" alt="Mateo on an outreach trip in rural Colombia" loading="lazy">
+          <figcaption>Somewhere off the map, Colombia</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ NOW / CONTACT ░░ -->
+  <section class="section contact" id="contact">
+    <div class="wrap contact-wrap">
+      <div class="cat"><span class="cat-id">08</span><span class="cat-co">RA 23ʰ — NOW</span></div>
+      <h2 class="reveal">I don’t know where my<br>next choice leads.</h2>
+      <p class="lead reveal">
+        But I know each act of courage can light the way for someone else. Right now I’m building
+        PadelYa into something anyone, anywhere can use to fall in love with this sport — and still
+        looking up at the same vast, starry sky.
+      </p>
+      <div class="contact-links reveal">
+        <a href="mailto:mateopirela08@gmail.com">
+          <span>Email</span>mateopirela08@gmail.com
+        </a>
+        <a href="https://github.com/fckyeslol" target="_blank" rel="noopener">
+          <span>GitHub</span>github.com/fckyeslol ↗
+        </a>
+        <a href="https://padelya.co/" target="_blank" rel="noopener">
+          <span>Startup</span>padelya.co ↗
+        </a>
+      </div>
+    </div>
+    <footer class="footer">
+      <span>✦ Mateo Pirela Pulido</span>
+      <span>Barranquilla · 10.96° N, 74.80° W</span>
+      <span>Built from instinct, 2026</span>
     </footer>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
