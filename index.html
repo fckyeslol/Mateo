@@ -5,7 +5,56 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mateo Pirela Pulido — Astronomer & Founder</title>
 <meta name="description" content="Mateo Pirela Pulido — olympiad astronomer from Barranquilla, software engineer at 30X, and founder of PadelYa. Betting on instinct over certainty.">
+<link rel="canonical" href="https://mateo-five.vercel.app/">
+<meta name="author" content="Mateo Pirela Pulido">
+<meta name="theme-color" content="#05060c">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mateo Pirela Pulido">
+<meta property="og:url" content="https://mateo-five.vercel.app/">
+<meta property="og:title" content="Mateo Pirela Pulido — Astronomer & Founder">
+<meta property="og:description" content="Silver-medal olympiad astronomer who represented Colombia at IOAA 2025, software engineer at 30X building PreWave, and founder of PadelYa. Betting on instinct over certainty.">
+<meta property="og:image" content="https://mateo-five.vercel.app/assets/indiaimg.webp">
+<meta property="og:image:alt" content="Mateo Pirela Pulido at IOAA 2025 in Mumbai, India">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mateo Pirela Pulido — Astronomer & Founder">
+<meta name="twitter:description" content="Olympiad astronomer, software engineer at 30X, founder of PadelYa. Betting on instinct over certainty.">
+<meta name="twitter:image" content="https://mateo-five.vercel.app/assets/indiaimg.webp">
+
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mateo Pirela Pulido",
+  "url": "https://mateo-five.vercel.app/",
+  "email": "mateopirela08@gmail.com",
+  "jobTitle": "Software Engineer & Founder",
+  "description": "Olympiad astronomer, software engineer at 30X, and founder of PadelYa.",
+  "homeLocation": {
+    "@type": "Place",
+    "name": "Barranquilla, Colombia"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "30X"
+  },
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "IED Alexander von Humboldt"
+  },
+  "knowsAbout": ["Astrophysics", "Chemistry", "Philosophy", "Software Engineering", "Spec-Driven Development"],
+  "sameAs": [
+    "https://github.com/fckyeslol",
+    "https://padelya.co/"
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Hanken+Grotesk:wght@300..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -20,9 +69,13 @@
 
 <header class="nav" id="nav">
   <a class="brand" href="#top"><span class="brand-mark">✦</span> Mateo&nbsp;Pirela</a>
-  <nav class="nav-links" aria-label="Section navigation">
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="nav-links" id="navLinks" aria-label="Section navigation">
     <a href="#cosmos">Cosmos</a>
     <a href="#building">Building</a>
+    <a href="#craft">Craft</a>
     <a href="#mind">Mind</a>
     <a href="#timeline">Journey</a>
     <a href="#contact" class="nav-cta">Contact</a>
@@ -79,7 +132,7 @@
       </div>
       <div class="split-media reveal">
         <figure class="porthole">
-          <img src="assets/img.jpeg" alt="Mateo in Barranquilla, Colombia" loading="lazy">
+          <img src="assets/img.webp" alt="Mateo in Barranquilla, Colombia" width="1000" height="750" loading="lazy" decoding="async">
           <figcaption>Barranquilla, Colombia</figcaption>
         </figure>
         <ul class="fact-list">
@@ -128,12 +181,12 @@
 
       <div class="cosmos-media">
         <figure class="frame tall reveal">
-          <img src="assets/indiaimg.png" alt="Mateo at IOAA 2025 in Mumbai, India" loading="lazy">
+          <img src="assets/indiaimg.webp" alt="Mateo at IOAA 2025 in Mumbai, India" width="900" height="1200" loading="lazy" decoding="async">
           <figcaption>IOAA 2025 — Mumbai</figcaption>
         </figure>
         <div class="cosmos-aside reveal">
           <figure class="frame">
-            <img src="assets/medalolaa.png" alt="Medal ceremony at the Latin American Astronomy Olympiad" loading="lazy">
+            <img src="assets/medalolaa.webp" alt="Medal ceremony at the Latin American Astronomy Olympiad" width="900" height="1200" loading="lazy" decoding="async">
             <figcaption>OLAA — medal ceremony</figcaption>
           </figure>
           <p class="note">
@@ -174,10 +227,11 @@
           <span class="kicker">Engineering</span>
           <h3>30X</h3>
           <p>
-            Software engineer in the media-tech vertical at 30X, the startup founded by
-            <strong>Andrés Bilbao, co-founder of Rappi</strong>. I landed it by messaging Andrés
+            Software engineer in the media-tech vertical at <strong>30X</strong>, the startup founded
+            by <strong>Andrés Bilbao, co-founder of Rappi</strong>. I landed it by messaging Andrés
             on Substack with everything I’d built — no referral, just the work.
           </p>
+          <p class="card-meta">My flagship there is <a href="#craft">PreWave — see how I build it ↓</a></p>
         </article>
         <article class="card reveal" style="--d:2">
           <span class="kicker">Hackathons</span>
@@ -187,6 +241,70 @@
             3rd-largest teen hackathon in the Americas with Hack Club, here in Barranquilla.
           </p>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ CRAFT / SPEC-DRIVEN ░░ -->
+  <section class="section craft" id="craft">
+    <div class="wrap">
+      <div class="cat"><span class="cat-id">04</span><span class="cat-co">RA 11ʰ — THE CRAFT</span></div>
+      <h2 class="reveal">I don’t just write code.<br>I spec it — then let agents build.</h2>
+      <p class="lead reveal">
+        At 30X I build <strong>PreWave</strong>, a content-intelligence system that detects viral
+        content and turns the winners into production-ready briefs. I ship it solo the way a team
+        would — through <em>spec-driven development</em> and <em>agentic engineering</em>: every
+        feature starts as a written spec governed by a living constitution, then AI coding agents
+        implement it against tests that gate the deploy.
+      </p>
+
+      <div class="craft-flow reveal">
+        <div class="flow-term" aria-hidden="true">
+          <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+          <span class="term-title">spec-driven loop · PreWave</span>
+        </div>
+        <ol class="flow-steps">
+          <li><span class="fs-cmd">/constitution</span><span class="fs-note">the non-negotiable principles</span></li>
+          <li><span class="fs-cmd">/specify</span><span class="fs-note">what &amp; why — no code yet</span></li>
+          <li><span class="fs-cmd">/clarify</span><span class="fs-note">kill every ambiguity</span></li>
+          <li><span class="fs-cmd">/plan</span><span class="fs-note">architecture &amp; contracts</span></li>
+          <li><span class="fs-cmd">/tasks</span><span class="fs-note">break into atomic units</span></li>
+          <li><span class="fs-cmd">/implement</span><span class="fs-note">agents build · tests gate</span></li>
+        </ol>
+      </div>
+
+      <div class="craft-grid">
+        <article class="principle reveal">
+          <span class="pr-id">P·01</span>
+          <h3>LLMs evaluate, never fabricate</h3>
+          <p>Models only score and rank real, scraped content — they never invent metrics or data. Every output traces back to a real input.</p>
+        </article>
+        <article class="principle reveal" style="--d:1">
+          <span class="pr-id">P·02</span>
+          <h3>The domain stays pure</h3>
+          <p>Scoring, virality detection and noise filters are framework-free logic. Dependencies point inward only, so the core is trivial to test.</p>
+        </article>
+        <article class="principle reveal" style="--d:2">
+          <span class="pr-id">P·03</span>
+          <h3>Pipelines are idempotent</h3>
+          <p>Ingestion dedupes by (id, source) and upserts. Run it twice, get identical state — no duplicate rows, no drift.</p>
+        </article>
+        <article class="principle reveal" style="--d:3">
+          <span class="pr-id">P·04</span>
+          <h3>Tests gate the deploy</h3>
+          <p>Every push to <code>main</code> runs the full suite against a real Postgres. A red test blocks production; green ships to GCP Cloud Run automatically.</p>
+        </article>
+      </div>
+
+      <div class="craft-foot reveal">
+        <p class="note">
+          9+ numbered specs shipped · a versioned constitution · multi-agent execution plans —
+          instinct sets the direction, the process lets one person ship like a real team.
+        </p>
+        <ul class="craft-stack" aria-label="Stack">
+          <li>Bun</li><li>Hono</li><li>TypeScript</li><li>Next.js 16</li>
+          <li>React 19</li><li>Postgres · Drizzle</li><li>GCP Cloud Run</li><li>Claude / Cursor agents</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -206,7 +324,7 @@
         </div>
       </div>
       <div class="split-text">
-        <div class="cat"><span class="cat-id">04</span><span class="cat-co">RA 13ʰ — MIND</span></div>
+        <div class="cat"><span class="cat-id">05</span><span class="cat-co">RA 13ʰ — MIND</span></div>
         <h2 class="reveal">From booby-trap chemistry<br>to a love of hard questions.</h2>
         <p class="reveal">
           It started as a kid, mixing whatever I could find with my cousin Juan and wondering why
@@ -230,7 +348,7 @@
   <!-- ░░ LEADERSHIP ░░ -->
   <section class="section leadership" id="leadership">
     <div class="wrap">
-      <div class="cat"><span class="cat-id">05</span><span class="cat-co">RA 16ʰ — LEADERSHIP</span></div>
+      <div class="cat"><span class="cat-id">06</span><span class="cat-co">RA 16ʰ — LEADERSHIP</span></div>
       <h2 class="reveal">The best decisions<br>don’t end with us.</h2>
       <div class="lead-grid">
         <article class="lead-item reveal">
@@ -297,7 +415,7 @@
       </div>
       <div class="split-media reveal">
         <figure class="frame">
-          <img src="assets/img3.jpeg" alt="Mateo on an outreach trip in rural Colombia" loading="lazy">
+          <img src="assets/img3.webp" alt="Mateo on an outreach trip in rural Colombia" width="1050" height="1400" loading="lazy" decoding="async">
           <figcaption>Somewhere off the map, Colombia</figcaption>
         </figure>
       </div>
@@ -307,7 +425,7 @@
   <!-- ░░ NOW / CONTACT ░░ -->
   <section class="section contact" id="contact">
     <div class="wrap contact-wrap">
-      <div class="cat"><span class="cat-id">08</span><span class="cat-co">RA 23ʰ — NOW</span></div>
+      <div class="cat"><span class="cat-id">07</span><span class="cat-co">RA 23ʰ — NOW</span></div>
       <h2 class="reveal">I don’t know where my<br>next choice leads.</h2>
       <p class="lead reveal">
         But I know each act of courage can light the way for someone else. Right now I’m building

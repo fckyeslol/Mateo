@@ -20,6 +20,26 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+  /* ---------- mobile nav ---------- */
+  var navToggle = document.getElementById("navToggle");
+  var navLinks = document.getElementById("navLinks");
+  if (navToggle && navLinks) {
+    function setMenu(open) {
+      navLinks.classList.toggle("open", open);
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    }
+    navToggle.addEventListener("click", function () {
+      setMenu(!navLinks.classList.contains("open"));
+    });
+    navLinks.addEventListener("click", function (e) {
+      if (e.target.closest("a")) setMenu(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") setMenu(false);
+    });
+  }
+
   /* ---------- reveal on scroll ---------- */
   var revealEls = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && !reduced) {
